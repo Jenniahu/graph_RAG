@@ -1,6 +1,5 @@
 import time
 import glob
-import os
 
 
 def create_spark():
@@ -40,6 +39,8 @@ def merge_spark_parts(part_dir, out_path):
     parts = sorted(glob.glob(f"{part_dir}/part-*.json"))
     if not parts:
         parts = sorted(glob.glob(f"{part_dir}/*.json"))
+    if not parts:
+        raise FileNotFoundError(f"No JSON part files found in {part_dir}")
     written = 0
     with open(out_path, "w") as out:
         for p in parts:
