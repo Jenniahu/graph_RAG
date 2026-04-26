@@ -53,6 +53,45 @@ def merge_spark_parts(part_dir, out_path):
     print(f"Merged {len(parts)} part files -> {out_path} ({written} rows)")
 
 
+def run_louvain_networkx(edges_path="output_jsonl/edges.jsonl", seed=42):
+    """Run Louvain community detection using NetworkX. Returns ({node_id: community_id}, elapsed)."""
+    import networkx as nx
+    import json as _json
+
+    t0 = time.time()
+    G = nx.Graph()
+    with open(edges_path) as f:
+        for line in f:
+            e = _json.loads(line)
+            G.add_edge(e["src"], e["dst"])
+
+    communities = nx.community.louvain_communities(G, seed=seed)
+    elapsed = time.time() - t0
+    print(f"[Louvain] communities={len(communities)}, time={elapsed:.1f}s")
+
+    node_to_community = {}
+    for cid, members in enumerate(communities):
+        for node in members:
+            node_to_community[node] = cid
+    return node_to_community, elapsed
+
+
+def merge_and_save_enriched(pagerank_path="output_jsonl/vertices_with_pagerank.jsonl",
+                             community_map=None,
+                             out_path="output_jsonl/vertices_enriched.jsonl"):
+    """Merge pagerank results with community IDs and save to vertices_enriched.jsonl."""
+    import json as _json
+
+    written = 0
+    with open(pagerank_path) as f_in, open(out_path, "w") as f_out:
+        for line in f_in:
+            row = _json.loads(line)
+            row["community_id"] = int(community_map.get(row["id"], -1))
+            f_out.write(_json.dumps(row) + "\n")
+            written += 1
+    print(f"Saved enriched vertices to {out_path} ({written} rows)")
+
+
 if __name__ == "__main__":
     import json
 
@@ -72,14 +111,13 @@ if __name__ == "__main__":
     spark.stop()
 
     # Merge Spark partition files -> single jsonl
-    merge_spark_parts(
-        "output_jsonl/vertices_with_pagerank",
-        "output_jsonl/vertices_with_pagerank.jsonl"
-    )
+    PR_DIR = "output_jsonl/vertices_with_pagerank"
+    if not glob.glob(PR_DIR + ".jsonl"):
+        merge_spark_parts(PR_DIR, PR_DIR + ".jsonl")
 
     # Save Top 100
     rows = []
-    with open("output_jsonl/vertices_with_pagerank.jsonl") as f:
+    with open(PR_DIR + ".jsonl") as f:
         for line in f:
             rows.append(json.loads(line))
 
@@ -88,4 +126,17 @@ if __name__ == "__main__":
         for r in top100:
             out.write(json.dumps(r) + "\n")
     print(f"\nTop 1: {top100[0]['name']}  pagerank={top100[0]['pagerank']:.4f}")
-    print(f"Saved output_jsonl/pagerank_top100.jsonl")
+
+    # Louvain (NetworkX, single-machine)
+    community_map, louvain_time = run_louvain_networkx()
+    merge_and_save_enriched(community_map=community_map)
+
+    # Quality check: Top 10 by PageRank with community
+    print("\n=== Top 10 PageRank Nodes (with community) ===")
+    enriched_rows = []
+    with open("output_jsonl/vertices_enriched.jsonl") as f:
+        for line in f:
+            enriched_rows.append(json.loads(line))
+    top10 = sorted(enriched_rows, key=lambda x: x["pagerank"], reverse=True)[:10]
+    for r in top10:
+        print(f"  [community {r['community_id']}] {r['name']}: {r['pagerank']:.4f}")

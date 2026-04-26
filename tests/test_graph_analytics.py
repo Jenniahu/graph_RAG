@@ -46,3 +46,20 @@ def test_pagerank_output_schema():
     assert "pagerank" in row, "Missing pagerank column"
     assert isinstance(row["pagerank"], float), "pagerank must be float"
     assert row["pagerank"] >= 0.0
+
+
+def test_louvain_output_schema():
+    with open("output_jsonl/vertices_enriched.jsonl") as f:
+        row = json.loads(f.readline())
+    assert "community_id" in row, "Missing community_id column"
+    assert isinstance(row["community_id"], int), "community_id must be int"
+    assert "pagerank" in row, "Missing pagerank column"
+
+
+def test_louvain_community_count():
+    community_ids = set()
+    with open("output_jsonl/vertices_enriched.jsonl") as f:
+        for line in f:
+            community_ids.add(json.loads(line)["community_id"])
+    assert len(community_ids) > 10, f"Too few communities: {len(community_ids)}"
+    print(f"Total communities: {len(community_ids)}")
