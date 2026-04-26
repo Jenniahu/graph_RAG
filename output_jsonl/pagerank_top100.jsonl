@@ -1,0 +1,100 @@
+{"id": "49dca65f362fee401292ed7ada96f96295eab1e589c52e4e66bf4aedda715fdd", "name": "United States", "type": "location", "pagerank": 1286.046089581182}
+{"id": "18d4e170765cc48842d847de1d0545a2e379e9c87b2af2a6f761681309939ce5", "name": "Iran", "type": "entity", "pagerank": 793.4219332163607}
+{"id": "abd149214539d9f222d25de6358735b9fa0efd3956f66102b2c119ae2d9f6348", "name": "India", "type": "entity", "pagerank": 746.6654138416927}
+{"id": "8d23a6e37e0a6431a8f1b43a91026dcff51170a89a6512ff098eaa56a4d5fb19", "name": "United Kingdom", "type": "person_or_work", "pagerank": 689.137671839458}
+{"id": "7a1ca4ef7515f7276bae7230545829c27810c9d9e98ab2c06066bee6270d5153", "name": "France", "type": "entity", "pagerank": 674.6652998127215}
+{"id": "7f69649ad70496d441a62f0f196b1c3283572f2c64f7b1b9cbc3939dac388958", "name": "Poland", "type": "entity", "pagerank": 606.881115163535}
+{"id": "c0ea960b065c6aa6dd567a1a741fa21aee3972692096e158cebb4309a3b2a716", "name": "England", "type": "entity", "pagerank": 403.81453336374705}
+{"id": "80db4ccdca106d37b920206331fcfe3e9e50a9e763d89b54ce3ad5ac8cf30f03", "name": "Germany", "type": "entity", "pagerank": 373.9873308539465}
+{"id": "a6c43b89e739bbbf83bb6d676f3af47bd45a92995ed6c0183aa96ecfcc976059", "name": "Electronic music", "type": "person_or_work", "pagerank": 366.3537194899704}
+{"id": "c1ef40ce0484c698eb4bd27fe56c1e7b68d74f9780ed674210d0e5013dae45e9", "name": "Australia", "type": "entity", "pagerank": 356.60936132099084}
+{"id": "5a9cf672c8be6b5ab9546a2fb49b06dd81a4e364c86ed023898c49d9bb0605dc", "name": "Italy", "type": "entity", "pagerank": 335.2954310444733}
+{"id": "be55ef3f4c4e6c2d9c2afe2a33ac90ad0f50d4de7f9163999877e2a9ca5a54f8", "name": "Canada", "type": "entity", "pagerank": 285.7337342909083}
+{"id": "33a3d8ed92b0709ba525369922e5138756c43abbf7e05edfcf02d3e0fd645c02", "name": "Russia", "type": "entity", "pagerank": 273.18983618680573}
+{"id": "1e16be3bd4a3b18065078128a8503caa3e251062c87545fce9c8a2270639d911", "name": "Australian rules football", "type": "person_or_work", "pagerank": 253.11907208264083}
+{"id": "8ef41e6f4b07432a0cb4eb7a8774e7a3878fd3e385f49aa09b406768467db228", "name": "Spain", "type": "entity", "pagerank": 222.67750325142038}
+{"id": "5a59ef2e40c5f89adb8c0c6ad0a8019b0e252fff530cf2ee822880eac13599c3", "name": "New York City", "type": "location", "pagerank": 219.97331874279243}
+{"id": "ecc0e7dc084f141b29479058967d0bc07dee25d9690a98ee4e6fdad5168274d7", "name": "London", "type": "entity", "pagerank": 196.13167422142712}
+{"id": "647294383b2cbc24b18f629498fc7c6f61d3819fb42a2287e93305aaa01b74e7", "name": "Japan", "type": "entity", "pagerank": 183.15912699117231}
+{"id": "07f62b021771d3cf67e2e1faf18769cc5e5c119ad7d4d1847a11e11d6d5a7ecb", "name": "Brazil", "type": "entity", "pagerank": 183.02294977794642}
+{"id": "449995c4fe8fab389053dac72d77798c094dd4a3b7b3cfe69c4d78d119308dce", "name": "Actor", "type": "entity", "pagerank": 171.3644431328694}
+{"id": "815eca977c7d75f72bd23bccc91bc6f9931a42fbf03451eb0d7db8d2a704d94f", "name": "New York", "type": "person_or_work", "pagerank": 161.65630574147167}
+{"id": "9770be844a10dabb7a6135be114734d0b0184f3f119054646adb19bda95ba96e", "name": "Pop music", "type": "person_or_work", "pagerank": 157.70277374459098}
+{"id": "07c67d76ef92ac9853588e098983fefba4ba5965f8fec95f42ab0d04c27865ba", "name": "Turkey", "type": "entity", "pagerank": 145.3721467276532}
+{"id": "a7d355b26bda6bf1196ccffead0b2cf2b81f0a9de5b4876b44407f1dc07e51e6", "name": "Mexico", "type": "entity", "pagerank": 138.33485977320575}
+{"id": "736b8f49ef1c2052a27ca7ce347830cb5eeb121eb0f7650e732bc78ead7adcc9", "name": "Pop rock", "type": "person_or_work", "pagerank": 135.36630634521487}
+{"id": "eedbe6d96c36d76741be4fcacf11bc2a1a6239536c089d623ab1007494ba997b", "name": "Ontario", "type": "entity", "pagerank": 131.55235599189055}
+{"id": "cad0535decc38b248b40e7aef9a1cfd91ce386fa5c46f05ea622649e7faf18fb", "name": "California", "type": "entity", "pagerank": 130.72211427254564}
+{"id": "853637136575897a73cba3c5fb085e8c8a2627df22983d2bbe9ff158d11351b4", "name": "Sweden", "type": "entity", "pagerank": 129.5301518305694}
+{"id": "bea54a349795017db7e863500429c8ba0c78b89855d73f9c82dfd92cb7c2d748", "name": "Norway", "type": "entity", "pagerank": 129.44819840688405}
+{"id": "3a386c13d283dc2ebbe2aeffc1ab3930d086b28956930d913d8dc58f34c013b7", "name": "Netherlands", "type": "entity", "pagerank": 127.71303714158647}
+{"id": "c3782c86d8099f3fb5b755ebc970322567aa3894923de8c9c5fc97456133471c", "name": "Philippines", "type": "entity", "pagerank": 124.31615303669535}
+{"id": "1134944dbe8ebb86563761fd58dd4696cc0b6ed5236185b4e10dc90bc036fb36", "name": "Hard rock", "type": "person_or_work", "pagerank": 124.04965046514394}
+{"id": "f6eae02225558cdf33f41f6f982892365ebb8606d3c6be1aca27be8266f3449b", "name": "Random House", "type": "person_or_work", "pagerank": 123.91545001791613}
+{"id": "5338fc1084503ca4bf3139a33090abfcc83979b7d33557f95d448c6de8aadabf", "name": "Soviet Union", "type": "person_or_work", "pagerank": 122.52073178568325}
+{"id": "ea0b937ea317101ee2c26b03a4843a19ceced8a2b9673c3cf409a726ca2b0fd8", "name": "Argentina", "type": "entity", "pagerank": 121.74759663962658}
+{"id": "278457c72bdcbd9a255028418a09e13fb0bfa5d104d3a54bbe5b3663ca1131d5", "name": "Country music", "type": "person_or_work", "pagerank": 119.3346870320066}
+{"id": "de993602f6e152e9c5e8a1508c9805d5038528970aa42286118f1145de9e419e", "name": "Par", "type": "entity", "pagerank": 109.8142995883754}
+{"id": "bef4a7a151a287fbc2a4b68a9bca3e9e3a8aced37a0f158859e3c03eb7516f08", "name": "Electropop", "type": "entity", "pagerank": 109.56193246257446}
+{"id": "a246670dbf76f29a5a21311589135cff74c9d8c4b777b20d33a6f193505429db", "name": "Scotland", "type": "entity", "pagerank": 107.44986781357433}
+{"id": "e2567312ec53232b5353c2798f8054759ee21b03af967265dd22b4cb4284bc49", "name": "Pakistan", "type": "entity", "pagerank": 101.69879660211198}
+{"id": "3e049d78d958038ac6bd5dcf038075cc73362b4956aaf7308c3a69c8eca76297", "name": "South Africa", "type": "person_or_work", "pagerank": 101.15848056253832}
+{"id": "348841ef53dbd5a64008a86be432973db790774fb28b59b0d99702a3188b3705", "name": "Belgium", "type": "entity", "pagerank": 100.24038257659616}
+{"id": "2a4bf3dd22915e640e8b79ddecf49e6a2ddf6f696295b783ef4f4d7c258452d6", "name": "Rock music", "type": "person_or_work", "pagerank": 97.36089343886798}
+{"id": "c85329e3779e4096c2e13bea0182f857883cda3413891e25a4723425cfd552d5", "name": "South Korea", "type": "person_or_work", "pagerank": 96.76566723267095}
+{"id": "c2e401a0743d7c76d4419c4cba726949e9ebcba613f3d8cd53bcbb9eb3058f3a", "name": "Alternative rock", "type": "person_or_work", "pagerank": 92.02582164974409}
+{"id": "a508c64ba4667b441c3fdda827a378be5b9ecd12373cf4408da9337ac74c50e9", "name": "Glam metal", "type": "person_or_work", "pagerank": 89.51106822160305}
+{"id": "10436829032f361a3de50048de41755140e581467bc1895e6c1a17f423e42d10", "name": "China", "type": "entity", "pagerank": 89.32424145187565}
+{"id": "2275583196d791405892aaca0d87743c872f3fc0cf3308a6c3ef82528918aa8a", "name": "Switzerland", "type": "entity", "pagerank": 86.96530069373692}
+{"id": "2e9c4b051664a377fdb1dac1d4058c5e51faeb91ff7702eb779f4c463e24d127", "name": "Vijayakumar", "type": "entity", "pagerank": 84.57856639692338}
+{"id": "5e3bd1afe2f175a1176013acb470898640d604a7a6291f9a2f959ff9ace02f32", "name": "Quebec", "type": "entity", "pagerank": 83.88154573617001}
+{"id": "8b6e04947230473368190a71c95399a7e9a0c12faa28b04a2dd5a1cc4350a9a9", "name": "Los Angeles", "type": "person_or_work", "pagerank": 83.67222818100183}
+{"id": "03af2ae175ab23356a3921c8d7441bc4a1bf0915e5b7c7e786d3f10b62d2ac16", "name": "Film director", "type": "person_or_work", "pagerank": 83.23118972268315}
+{"id": "504be3084f44d3e7eea35c83d4c8338e1fa19b777badc317f69326a4083d804e", "name": "Hungary", "type": "entity", "pagerank": 82.38359639068524}
+{"id": "1c769ecb9e80202f43b5dfa8c2e8a76f1136f688292489308b07c22a66763376", "name": "Czech Republic", "type": "person_or_work", "pagerank": 82.24741917745934}
+{"id": "121730bd619d2df5d68a6e9fb85a0591b0db2c94e70d9ab2edce0246aa1d2624", "name": "Toronto", "type": "entity", "pagerank": 81.41717745811442}
+{"id": "c9cab0238debc6e55498e2c0963a1d8e25bd29c95ddd53a3fff841ee636b6bc5", "name": "Austria", "type": "entity", "pagerank": 81.19314397829119}
+{"id": "c527097577600a6726de99bd6f555fbfaf214da9b7d127d7dd4a807927422b98", "name": "Denmark", "type": "entity", "pagerank": 79.60294555287919}
+{"id": "3e284681b6953703e69052e6b42f540f50b1a6e63adc85bd5888c6919fa9624b", "name": "Jazz", "type": "entity", "pagerank": 78.03910400744643}
+{"id": "9c93ad439373b4ee35e70ba1318055a14d2ed222f69f9e2d069689e83829833d", "name": "Greece", "type": "entity", "pagerank": 76.47712940767883}
+{"id": "81573efb842063afaf97116682995dd72490677a8555f6270269b0fee66803fd", "name": "its examples", "type": "person_or_work", "pagerank": 74.54066747154}
+{"id": "7ccfa9885016ef563ab1728e9b93f9bbffe8d3f20e3e5b79c31bdb7f85540590", "name": "Hip hop music", "type": "person_or_work", "pagerank": 72.90829803816135}
+{"id": "1e1aaa016a2082dcb532d703e6e79629eacb7f4d4418e6e1b23044431c1351d2", "name": "Football player", "type": "person_or_work", "pagerank": 72.57444422509144}
+{"id": "808ed51137308015c71ccb45d27995efea3745131b48229f0eeac7d39500cad3", "name": "Pennsylvania", "type": "entity", "pagerank": 71.71345281243742}
+{"id": "7b7a25f38be0abd0eccb4662dd2edf26f508a496320c0012e718365cd57a335c", "name": "Daniel Fickle", "type": "person_or_work", "pagerank": 68.28266560181093}
+{"id": "fc79355854147f7040796234c5e0b0c62b9e29a3c5c95cd0b0b26bd3e8370d8b", "name": "Actress", "type": "entity", "pagerank": 68.03227524200858}
+{"id": "946e653c8e1e096c0ef5aa3f3bb012d5c46e6faeec68a81b3e4d377fb3744fb5", "name": "Illino", "type": "entity", "pagerank": 67.95320460207097}
+{"id": "56059e7fb4e9ddfa1470a50a43ac2f05509cb802757e68d35d9033232b097e58", "name": "Slovenia", "type": "entity", "pagerank": 67.17128382935458}
+{"id": "e8739c839576f7acbf1f190c8ac6b69e9bb11dda266a624abf1523460ac28106", "name": "Serbia", "type": "entity", "pagerank": 66.6090037231316}
+{"id": "dbc74a36d8e7439c45c64d856388506cc9b1218619cef979c3d605115a7a4546", "name": "Indonesia", "type": "entity", "pagerank": 66.03793799024882}
+{"id": "2898e16d4e4ee2ae2fa8815d719efb385f0b40ca912e06fc2940658547c30237", "name": "New Zealand", "type": "person_or_work", "pagerank": 65.61622791058153}
+{"id": "7e1f4ce28eb4557cb2b81255d4c65480065b4995f2850bd7f39861191776b727", "name": "Republic of Ireland", "type": "person_or_work", "pagerank": 65.24009326921166}
+{"id": "e15a18aadcac09e6fa6469cee82b657d12915065b23be9f2c1a14685b08cb3d1", "name": "Nepal", "type": "entity", "pagerank": 64.57952396473287}
+{"id": "04952a0f984dccfa1c401fbe5669c5342059049be3e2bba73dc5a481759b22a9", "name": "Nigeria", "type": "entity", "pagerank": 64.06117199180851}
+{"id": "4c7de2c3da6dc0ae8f9d13b107718a913859359bd30166d077c867577953865d", "name": "Portugal", "type": "entity", "pagerank": 63.14307400586625}
+{"id": "54818870165a6374576f54458561a3d1592c45e7d49bd4de3c41cc9fb3d4d9db", "name": "Melbourne", "type": "entity", "pagerank": 62.97922206866219}
+{"id": "dad114b6ed7342bac65c79575f6c7ff761ec26b52c1f5f7a9110532973d05df2", "name": "Berlin", "type": "entity", "pagerank": 62.861933952754725}
+{"id": "557c1599d9a04895d3817d293e0806a4419a14de31958386182798d0d2ed3a56", "name": "Egypt", "type": "entity", "pagerank": 62.75797802530338}
+{"id": "ea23726dd0fd4e4dd85eb695843fcdd3b6928ab5561fa959f1523bd36bb613fe", "name": "Romania", "type": "entity", "pagerank": 62.55882983299389}
+{"id": "66b86bf0f04594746e886baa094d6038b92895c79526fd60a44395cb0c0854cc", "name": "Bulgaria", "type": "entity", "pagerank": 62.361153233149864}
+{"id": "10aeba697f6ba830e1252df6f9a9051eb4317954ff933bff25458f28fb069c6b", "name": "Estonia", "type": "entity", "pagerank": 61.601196527082806}
+{"id": "2f1d47eb679bb05e6d8fe039af1563549588cd44b40be6b1013ea8ca2268845f", "name": "Bangladesh", "type": "entity", "pagerank": 61.06307689417406}
+{"id": "a656651c4b6af9a1fd2a8a6f8b1331e7a45a827615f4372d766b7d636ffefe64", "name": "Indie rock", "type": "person_or_work", "pagerank": 60.5879209189934}
+{"id": "1c8c1b29e99132f8ab4bc1d1a767f330d2f0204ec389d940b9ee84a2352bbcbc", "name": "Washington, D.C.", "type": "person_or_work", "pagerank": 60.55570695457435}
+{"id": "75dde5a56285be8e4f7608b809da141ac7c54d2e217910dbf7499ddd67a263e6", "name": "Socialist Federal Republic of Yugoslavia", "type": "person_or_work", "pagerank": 60.21306751484472}
+{"id": "4661bd5b4b1a3ded4bdeaeaf6d470b60a59209b5913e7532341bc8beb4216790", "name": "Moscow", "type": "entity", "pagerank": 60.195496261525236}
+{"id": "d0d22019186582c6a842762ec016c71601d45dae437ec65a75799d86c8f392c0", "name": "Rome", "type": "entity", "pagerank": 60.06747713019769}
+{"id": "7d9c9858576380da1e81fa7d44ec3a00eb47c6516dc26747daefc6837e927e34", "name": "Montreal", "type": "entity", "pagerank": 60.06546898696118}
+{"id": "eff513ed942802cd4d4cf3d3efc0a73435c76508f2336bef0a46251e310bb5c8", "name": "Post-grunge", "type": "entity", "pagerank": 59.80892868849691}
+{"id": "0f5d983d203189bbffc5f686d01f6680bc6a83718a515fe42639347efc92478e", "name": "Chicago", "type": "entity", "pagerank": 59.00152959846727}
+{"id": "07f8d1144a39d45664231d8f129214d7ba99ce146240e154f4c893e8e4e1c0d6", "name": "Sri Lanka", "type": "person_or_work", "pagerank": 58.7897959959677}
+{"id": "142f41284e5517e5e1e867854da66652d35da004dfe92cf5d1d93310ed32d98a", "name": "Budapest", "type": "entity", "pagerank": 58.78101036930798}
+{"id": "abae768240354770b732e87de24a76aa3123c0abbe7f4ebe6110c090d30eae98", "name": "Buenos Aires", "type": "person_or_work", "pagerank": 57.16884787724665}
+{"id": "8383f5e596221f99908a4384c0d8ab1978065f943e32411e03fce3930e8bbafb", "name": "Los Angeles, California", "type": "person_or_work", "pagerank": 56.69332583428849}
+{"id": "770975175c140a93a8a814ef3b06f4e1b360d3a07fa4d1326ca59e081b667a11", "name": "Clark's Department Stores in the United States from the Gamble's chain", "type": "location", "pagerank": 56.52991317841711}
+{"id": "455fd2537470f3d6cedc4905ba52d0d4ff4dec15d320f72f62bb170a0f331842", "name": "Cook Coffee Co", "type": "person_or_work", "pagerank": 56.52991317841711}
+{"id": "b20371f3e79736b1e45997a0195caa028575b516a5817f951662f68e2400e658", "name": "Lenny Kravitz", "type": "person_or_work", "pagerank": 56.44062924748758}
+{"id": "7328d3f829b7b3405e87f3041aa984b8844c4155ea865d5be3b2036bd5264898", "name": "Croatia", "type": "entity", "pagerank": 55.96960983819285}
+{"id": "6b615adb1300c1161bcb58c11141164e9b762987607e7cccdcd0178f3bb13d0b", "name": "Colombia", "type": "entity", "pagerank": 55.46004349192823}
+{"id": "aed8f531aa7e785be255bc435e2582e74c58defedebcb629eeabf365b809bd6f", "name": "Finland", "type": "entity", "pagerank": 55.178903438816725}
+{"id": "b6f5b82d11fc73d564cd8b2d5c3e3366cb63c2cf15ab474f291293d295a097ba", "name": "Czechoslovakia", "type": "entity", "pagerank": 54.97244121231295}
