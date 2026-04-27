@@ -63,3 +63,33 @@ def test_louvain_community_count():
             community_ids.add(json.loads(line)["community_id"])
     assert len(community_ids) > 10, f"Too few communities: {len(community_ids)}"
     print(f"Total communities: {len(community_ids)}")
+
+
+def test_all_deliverables_exist():
+    required = [
+        "output_jsonl/vertices_enriched.jsonl",
+        "output_jsonl/pagerank_top100.jsonl",
+        "output_jsonl/community_summary.jsonl",
+        "output_jsonl/scalability_results.csv",
+        "output_jsonl/partition_results.csv",
+        "figures/scaling_curve.png",
+        "figures/partition_comparison.png",
+        "figures/pagerank_distribution.png",
+        "figures/community_size_distribution.png",
+    ]
+    missing = [p for p in required if not pathlib.Path(p).exists()]
+    assert not missing, f"Missing deliverables: {missing}"
+
+
+def test_enriched_vertex_count():
+    count = sum(1 for _ in open("output_jsonl/vertices_enriched.jsonl"))
+    with open("output_jsonl/vertices.jsonl") as f:
+        original = sum(1 for _ in f)
+    assert count == original, f"Row count mismatch: enriched={count}, original={original}"
+
+
+def test_interface_types():
+    with open("output_jsonl/vertices_enriched.jsonl") as f:
+        row = json.loads(f.readline())
+    assert isinstance(row["pagerank"], float), "pagerank must be double/float"
+    assert isinstance(row["community_id"], int), "community_id must be int"

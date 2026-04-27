@@ -1,5 +1,11 @@
 import time
 import glob
+import sys
+import os
+
+# Ensure Spark workers use the same Python as the driver
+os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
+os.environ.setdefault("PYSPARK_DRIVER_PYTHON", sys.executable)
 
 
 def create_spark():

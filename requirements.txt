@@ -1,0 +1,21 @@
+# Core Spark
+pyspark==3.5.1
+
+# Graph algorithms
+# 注意：graphframes 需要通过 Spark 的 --packages 参数加载，无法通过 pip 直接安装 0.8.3
+# 使用方式：
+#   1) 启动时指定：pyspark --packages graphframes:graphframes:0.8.3-spark3.5-s_2.12
+#   2) 或在代码中：SparkSession.builder.config("spark.jars.packages", "graphframes:graphframes:0.8.3-spark3.5-s_2.12")
+# 如需 Python graphframes 模块（旧版），可执行：pip install graphframes
+networkx==3.3
+
+# Data processing
+pandas==2.2.2
+numpy==1.26.4
+
+# Visualization
+matplotlib==3.9.0
+seaborn==0.13.2
+
+# Testing
+pytest==8.2.2

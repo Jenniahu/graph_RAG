@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude Code internal files
+.claude/
+
+# Large raw data files (>100MB, exceed GitHub limit)
+output_jsonl/wiki_articles_50000.jsonl
+output_jsonl/clean_articles.jsonl

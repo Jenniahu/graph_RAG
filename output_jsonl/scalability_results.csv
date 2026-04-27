@@ -1,0 +1,4 @@
+fraction,label,num_vertices,num_edges,pagerank_sec,louvain_sec
+0.25,25%,38332,7227,12.07,0.24
+0.5,50%,76665,29051,4.62,1.53
+1.0,100%,153331,114896,62.19,7.29
