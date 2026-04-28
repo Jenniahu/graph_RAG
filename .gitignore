@@ -12,3 +12,6 @@ __pycache__/
 # Large raw data files (>100MB, exceed GitHub limit)
 output_jsonl/wiki_articles_50000.jsonl
 output_jsonl/clean_articles.jsonl
+
+# Large local data directory (3.1GB)
+member_A/

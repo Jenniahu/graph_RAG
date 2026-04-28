@@ -1,5 +1,72 @@
+"""Tests for graph analytics pipeline.
+
+Includes:
+- Package import tests (verify refactored modules load correctly)
+- Output schema and integrity tests (verify pipeline results)
+"""
+
 import json
 import pathlib
+
+# ============================================================
+# Package import tests
+# ============================================================
+
+def test_import_config():
+    from graph_rag.config import Config
+    cfg = Config()
+    assert cfg.max_iter == 10
+    assert cfg.reset_prob == 0.15
+
+
+def test_import_spark_utils():
+    from graph_rag.spark_utils import create_spark
+    assert callable(create_spark)
+
+
+def test_import_io_utils():
+    from graph_rag.io_utils import merge_spark_parts, load_graph, read_jsonl, write_jsonl
+    assert callable(merge_spark_parts)
+    assert callable(load_graph)
+    assert callable(read_jsonl)
+    assert callable(write_jsonl)
+
+
+def test_import_pagerank():
+    from graph_rag.algorithms.pagerank import run_pagerank, save_pagerank, extract_top_n
+    assert callable(run_pagerank)
+    assert callable(save_pagerank)
+    assert callable(extract_top_n)
+
+
+def test_import_community():
+    from graph_rag.algorithms.community import run_louvain_networkx, merge_and_save_enriched
+    assert callable(run_louvain_networkx)
+    assert callable(merge_and_save_enriched)
+
+
+def test_import_pipeline():
+    from graph_rag.pipeline import Pipeline
+    assert callable(Pipeline)
+
+
+def test_import_scalability():
+    from graph_rag.scalability import sample_subgraph, run_scaling_experiments, run_partition_experiments
+    assert callable(sample_subgraph)
+    assert callable(run_scaling_experiments)
+    assert callable(run_partition_experiments)
+
+
+def test_import_top_level():
+    from graph_rag import Config, Pipeline
+    assert callable(Pipeline)
+    cfg = Config()
+    assert cfg.vertices_path == "output_jsonl/vertices.jsonl"
+
+
+# ============================================================
+# Output data integrity tests (require pipeline has been run)
+# ============================================================
 
 DATA_DIR = pathlib.Path("output_jsonl")
 
