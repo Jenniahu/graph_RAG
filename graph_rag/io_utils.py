@@ -41,6 +41,37 @@ def load_graph(spark, vertices_path="output_jsonl/vertices.jsonl",
     return GraphFrame(v, e)
 
 
+def load_entity_graph(spark, vertices_path="output_jsonl/vertices.jsonl",
+                      edges_path="output_jsonl/edges.jsonl",
+                      entity_edge_sources=("extracted", "seed")):
+    """Load entity-entity subgraph from multilayer graph data.
+
+    Filters vertices to node_type=='entity' and edges to source in entity_edge_sources.
+
+    Args:
+        spark: Active SparkSession.
+        vertices_path: Path to vertices JSONL.
+        edges_path: Path to edges JSONL.
+        entity_edge_sources: Tuple of edge source values that represent entity-entity relations.
+
+    Returns:
+        GraphFrame instance containing only entity nodes and entity-entity edges.
+    """
+    from graphframes import GraphFrame
+    v_all = spark.read.json(vertices_path)
+    e_all = spark.read.json(edges_path)
+
+    v = v_all.filter(v_all.node_type == "entity")
+
+    # Dynamically build filter for any number of edge sources
+    source_col = e_all.source
+    source_filter = source_col == entity_edge_sources[0]
+    for s in entity_edge_sources[1:]:
+        source_filter = source_filter | (source_col == s)
+    e = e_all.filter(source_filter)
+    return GraphFrame(v, e)
+
+
 def read_jsonl(path):
     """Read a .jsonl file and return a list of dicts."""
     rows = []

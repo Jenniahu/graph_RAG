@@ -84,3 +84,99 @@ def time_louvain_networkx(edges, seed=42):
 
     print(f"  Louvain communities={len(communities)}, time={elapsed:.1f}s")
     return elapsed
+
+
+# ---------------------------------------------------------------------------
+# Networkit variants (faster, handles larger graphs)
+# ---------------------------------------------------------------------------
+
+
+def run_louvain_networkit(edges_path="output_jsonl/edges.jsonl",
+                          entity_edge_sources=("extracted", "seed"),
+                          seed=42):
+    """Run Louvain community detection using Networkit.
+
+    Reads edges from JSONL, filters to entity-entity relations, and runs
+    the Parallel Louvain Method (PLM) from Networkit.
+
+    Args:
+        edges_path: Path to edges JSONL file.
+        entity_edge_sources: Tuple of edge source values to keep.
+        seed: Random seed (passed to Networkit where supported).
+
+    Returns:
+        ({node_id: community_id}, elapsed_seconds)
+    """
+    import networkit as nk
+    import json
+
+    t0 = time.time()
+    G = nk.graph.Graph()
+    node_map = {}          # original id -> networkit index
+    node_list = []         # networkit index -> original id
+
+    with open(edges_path) as f:
+        for line in f:
+            e = json.loads(line)
+            if entity_edge_sources and e.get("source") not in entity_edge_sources:
+                continue
+            src = e["src"]
+            dst = e["dst"]
+            if src not in node_map:
+                node_map[src] = G.addNode()
+                node_list.append(src)
+            if dst not in node_map:
+                node_map[dst] = G.addNode()
+                node_list.append(dst)
+            G.addEdge(node_map[src], node_map[dst])
+
+    communities = nk.community.PLM(G).run()
+    partition = communities.getPartition()
+
+    node_to_community = {}
+    for idx, orig_id in enumerate(node_list):
+        node_to_community[orig_id] = partition.subsetOf(idx)
+
+    elapsed = time.time() - t0
+    num_communities = len(set(node_to_community.values()))
+    print(f"[Louvain/Networkit] nodes={G.numberOfNodes()}, edges={G.numberOfEdges()}, "
+          f"communities={num_communities}, time={elapsed:.1f}s")
+    return node_to_community, elapsed
+
+
+def time_louvain_networkit(edges, seed=42):
+    """Run Louvain on Networkit from in-memory edge list and return elapsed seconds.
+
+    Args:
+        edges: List of edge dicts with 'src' and 'dst' keys (already filtered).
+        seed: Random seed for reproducibility.
+
+    Returns:
+        Elapsed seconds.
+    """
+    import networkit as nk
+
+    G = nk.graph.Graph()
+    node_map = {}
+    node_list = []
+
+    for e in edges:
+        src = e["src"]
+        dst = e["dst"]
+        if src not in node_map:
+            node_map[src] = G.addNode()
+            node_list.append(src)
+        if dst not in node_map:
+            node_map[dst] = G.addNode()
+            node_list.append(dst)
+        G.addEdge(node_map[src], node_map[dst])
+
+    t0 = time.time()
+    algo = nk.community.PLM(G)
+    algo.run()
+    elapsed = time.time() - t0
+    partition = algo.getPartition()
+    num_communities = partition.numberOfSubsets()
+
+    print(f"  Louvain/Networkit communities={num_communities}, time={elapsed:.1f}s")
+    return elapsed

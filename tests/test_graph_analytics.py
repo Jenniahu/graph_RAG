@@ -60,8 +60,15 @@ def test_import_scalability():
 def test_import_top_level():
     from graph_rag import Config, Pipeline
     assert callable(Pipeline)
-    cfg = Config()
-    assert cfg.vertices_path == "output_jsonl/vertices.jsonl"
+    # Config now uses data_version-based paths; verify property works correctly
+    cfg_v4 = Config(data_version="v4")
+    assert "output_jsonl 2" not in cfg_v4.vertices_path
+    cfg_v5 = Config(data_version="v5")
+    assert "output_jsonl 2" in cfg_v5.vertices_path
+    cfg_input = Config(data_version="input")
+    assert "input/nodes.jsonl" in cfg_input.vertices_path
+    assert cfg_input.entity_edge_sources == ("entity_cooccurrence",)
+    assert cfg_input.mention_source == "chunk_mention"
 
 
 # ============================================================
@@ -149,10 +156,11 @@ def test_all_deliverables_exist():
 
 
 def test_enriched_vertex_count():
+    # enriched file contains entity-only nodes (after entity subgraph filtering),
+    # so count should match vertices_with_pagerank.jsonl (which is also entity-only)
     count = sum(1 for _ in open("output_jsonl/vertices_enriched.jsonl"))
-    with open("output_jsonl/vertices.jsonl") as f:
-        original = sum(1 for _ in f)
-    assert count == original, f"Row count mismatch: enriched={count}, original={original}"
+    pagerank_count = sum(1 for _ in open("output_jsonl/vertices_with_pagerank.jsonl"))
+    assert count == pagerank_count, f"Row count mismatch: enriched={count}, pagerank={pagerank_count}"
 
 
 def test_interface_types():
